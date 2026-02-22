@@ -1,208 +1,39 @@
-🚀 Propsoch Landing Page Redesign
+# Part 1: Analysis
 
-This project is a redesigned version of the Propsoch landing page as part of the Frontend Engineer Intern assignment.
+Lighthouse Score :
 
-The goal was to analyze the existing landing page, identify UI/UX and performance issues, and build an improved version using modern frontend best practices.
+The current Lighthouse score shows strong SEO (100), Performance (68), Accessibility (77) and Best Practices (77)
+It indicates that we need some improvement.
 
-📌 Assignment Requirements
+Performance 68 means the website is little bit slow. The reason could be the heavy images, large JS bundles or render-blocking resources
 
-Build an improved landing page with:
+# To solve this, we can do -
 
-✅ Redesigned Hero Section
+      1. Using Next.js next/image for automatic image optimization
+      2. Compress images and use modern formats (WebP/AVIF)
 
-✅ Two additional sections from the original website
+Accessibility 77 suggests Missing alt text in images, Low color contrast, Buttons without labels or Lack of proper semantic HTML elements ( header, section, nav, main, footer)
 
-✅ Fully responsive design (Mobile + Desktop)
+I tried to maintain the semantic tags in my code.
 
-✅ Optimized images
+Best Practices 77 means there some technical issues exist. It may be -
 
-✅ Tech Stack: Next.js, TypeScript, Tailwind CSS
+       1. Deprecated APIs
+       2. Console warnings
+       3. Large or unoptimized assets
 
-🔎 Part 1: Analysis
-Lighthouse Score (Original Website)
-Metric Score
-Performance 68
-Accessibility 77
-Best Practices 77
-SEO 100
-Key Observations
-⚡ Performance – 68
+SEO is Strong
 
-The performance score indicates that the website can be optimized further.
+# 5 UI/UX Issues I Observed :
 
-Possible reasons:
+1. in the customer testimonial section, testimonial cards aren’t perfectly aligned. I fixed it in my code and made it a pinterest style Masonry Grid for web and carousel with autoscroll effect for mobile screen
 
-Heavy or unoptimized images
+2. In the product differentiation section, while comparing with online and local brokers, after changing the tab the width of the cell of the table is changing, it causes eye disturbance. I fixed this issue in my code
 
-Large JavaScript bundles
+3. Go to search → search any location – click on that location – you will redirect to : “https://www.propsoch.com/buy/property-for-sale-in-[location]” page .
+   Now reload the page , you'll see some issue with repaint in screen, for a microsecond the ROI section is coming first in screen then the List of the property.
+   This List is coming from API Call, there might have changes that in code “useEffect” has been used but we also need useLayoutEffect hook, so it can be a custom hook - useEffect + useLayoutEffect hook to fix this, but I need to check the code first
 
-Render-blocking resources
+4. Below the research Insights accordion, we have a light purple banner, it has two buttons, one button which is “Book an appointment” – is not working, after clicking, it redirects to error 404 page.
 
-Improvement Approach in This Project:
-
-Used next/image for automatic optimization
-
-Compressed images
-
-Implemented lazy loading
-
-Reduced layout shifts
-
-Optimized component structure
-
-♿ Accessibility – 77
-
-The website shows room for accessibility improvements.
-
-Potential Issues:
-
-Missing alt text in images
-
-Low color contrast
-
-Lack of semantic HTML structure
-
-Buttons without accessible labels
-
-Improvements Implemented:
-
-Used semantic HTML tags (header, section, main, footer)
-
-Added meaningful alt attributes
-
-Improved visual contrast
-
-Ensured better keyboard accessibility
-
-🛠 Best Practices – 77
-
-The score suggests some technical and optimization issues.
-
-Possible causes:
-
-Deprecated APIs
-
-Console warnings
-
-Large or unoptimized assets
-
-Improvements Implemented:
-
-Clean and modular component structure
-
-Optimized static assets
-
-Followed modern Next.js standards
-
-Ensured no unnecessary re-renders
-
-🔍 SEO – 100
-
-The original website performs strongly in SEO.
-
-The redesign maintains:
-
-Proper heading hierarchy
-
-Mobile responsiveness
-
-SEO-friendly structure
-
-🎯 5 UI/UX Issues Identified
-1️⃣ Testimonial Section Alignment Issue
-
-Cards were not perfectly aligned.
-
-Improved by implementing:
-
-Masonry grid layout (Desktop)
-
-Auto-scrolling carousel (Mobile)
-
-2️⃣ Product Differentiation Table Width Shift
-
-Switching tabs changed column width.
-
-This caused visual disturbance.
-
-Fixed by maintaining consistent table layout structure.
-
-3️⃣ Repaint Issue on Location Page Reload
-
-URL pattern:
-On reload:
-
-The ROI section briefly appears before property list.
-
-Likely due to asynchronous API rendering.
-
-Possible Reason:
-Improper effect handling (useEffect timing).
-
-Potential Fix:
-
-Use useLayoutEffect
-
-Improve rendering synchronization
-
-Better loading state management
-
-4️⃣ Broken CTA Button
-
-In the light purple banner below the Research Insights section:
-
-"Book an appointment" button redirects to 404.
-
-This negatively impacts user trust.
-
-5️⃣ Pagination UI Not Smooth
-
-In location-based property listing page:
-
-Pagination works functionally
-
-But UI transition is not visually smooth
-
-Can be improved with better loading states and animation
-
-🏗 Part 2: Implementation
-Redesigned Sections
-1️⃣ Hero Section (Redesigned)
-
-Improved visual hierarchy
-
-Clear CTA focus
-
-Optimized background media
-
-Better spacing and typography
-
-Mobile-first layout
-
-2️⃣ Customer Testimonials Section
-
-Masonry grid layout for desktop
-
-Carousel layout for mobile
-
-Improved alignment and spacing
-
-3️⃣ Product Differentiation Section
-
-Stable table width
-
-Cleaner tab interaction
-
-Better readability
-
-Responsive structure
-
-💻 Tech Stack
-
-Next.js
-
-TypeScript
-
-Tailwind CSS
-
-Next/Image for image optimization
+5. In https://www.propsoch.com/buy/property-for-sale-in-[location]” page pagination is working but UI painting is not eye smoothing
