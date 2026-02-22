@@ -37,3 +37,32 @@ SEO is Strong
 4. Below the research Insights accordion, we have a light purple banner, it has two buttons, one button which is “Book an appointment” – is not working, after clicking, it redirects to error 404 page.
 
 5. In https://www.propsoch.com/buy/property-for-sale-in-[location]” page pagination is working but UI painting is not eye smoothing
+
+# 🌟 I've added one extra section by my own :
+
+Section Name : Advisor Panel
+
+Below the Accessories section, I have added one new section - Advisor Panel. I have added carousel with auto scroll as well.
+
+# Total components I have build :
+
+           1. Navbar
+           2. Hero Section
+           3. Testimonial
+           4. Home Buying Steps
+           5. Product Difference
+           6. ROI Section
+           7. Research insights
+           8. Accessories
+           9. AdvisorConnect
+           10. Resources
+           11. Footer
+
+# Focus on Code Reusability :
+
+I try to made the code re-usable and designed the UI system.
+
+⚡ Check in my code :
+src -> helper -> Custom Buttons
+
+I created a Reusable Action Button with dynamic prop.
