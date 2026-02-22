@@ -130,3 +130,79 @@ Fixed by maintaining consistent table layout structure.
 3️⃣ Repaint Issue on Location Page Reload
 
 URL pattern:
+On reload:
+
+The ROI section briefly appears before property list.
+
+Likely due to asynchronous API rendering.
+
+Possible Reason:
+Improper effect handling (useEffect timing).
+
+Potential Fix:
+
+Use useLayoutEffect
+
+Improve rendering synchronization
+
+Better loading state management
+
+4️⃣ Broken CTA Button
+
+In the light purple banner below the Research Insights section:
+
+"Book an appointment" button redirects to 404.
+
+This negatively impacts user trust.
+
+5️⃣ Pagination UI Not Smooth
+
+In location-based property listing page:
+
+Pagination works functionally
+
+But UI transition is not visually smooth
+
+Can be improved with better loading states and animation
+
+🏗 Part 2: Implementation
+Redesigned Sections
+1️⃣ Hero Section (Redesigned)
+
+Improved visual hierarchy
+
+Clear CTA focus
+
+Optimized background media
+
+Better spacing and typography
+
+Mobile-first layout
+
+2️⃣ Customer Testimonials Section
+
+Masonry grid layout for desktop
+
+Carousel layout for mobile
+
+Improved alignment and spacing
+
+3️⃣ Product Differentiation Section
+
+Stable table width
+
+Cleaner tab interaction
+
+Better readability
+
+Responsive structure
+
+💻 Tech Stack
+
+Next.js
+
+TypeScript
+
+Tailwind CSS
+
+Next/Image for image optimization
