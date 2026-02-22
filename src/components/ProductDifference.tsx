@@ -21,7 +21,7 @@ const ProductDifference = () => {
               Here's why.
             </h4>
           </header>
-          <div className="flex w-full flex-col items-center gap-2 xl:w-fit">
+          <div className="flex w-full flex-col items-center gap-2 xl:w-85">
             <TabSwitch
               tabs={["Online Portal", "Local Broker"]}
               defaultTab="Online Portal"

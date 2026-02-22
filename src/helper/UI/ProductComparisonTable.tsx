@@ -99,8 +99,8 @@ const ProductComparisonTable = ({ activeTab }: ComparisonTableProps) => {
   const currentData = data[activeTab] || data["Online Portal"];
 
   return (
-    <div className="w-full overflow-hidden rounded-xl border border-orange-300 bg-white shadow-sm">
-      <table className="w-full text-left border-collapse">
+    <div className="w-full overflow-y-auto rounded-xl border border-orange-300 bg-white shadow-sm">
+      <table className="w-full text-left border-collapse ">
         <thead>
           <tr className="border-b border-orange-300 bg-gray-50">
             <th className="px-6 py-4 text-sm font-semibold text-gray-500 w-1/3">

@@ -74,7 +74,7 @@ const TestimonialCards = () => {
     <div className="bg-transparent min-h-screen p-10">
       <div className="max-w-6xl mx-auto">
         {/* Masonry container */}
-        <div className="columns-1 sm:columns-2 lg:columns-3 gap-4">
+        <div className="columns-1 lg:columns-3 gap-4">
           {testimonials.map((item) => (
             <div
               key={item.id}

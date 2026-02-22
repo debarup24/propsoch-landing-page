@@ -5,7 +5,7 @@ import React from "react";
 const HomebuyingSteps = () => {
   return (
     <section className="flex w-full flex-col items-center gap-8 py-28">
-      <div className="flex w-full max-w-7xl items-center justify-between">
+      <div className="flex flex-col lg:flex-row w-full max-w-7xl items-center justify-between">
         <div className="flex w-full max-w-7xl flex-col px-4 xl:px-0">
           <p className="inline font-normal text-[#FF6D33] text-sm xl:text-lg leading-[1.35]">
             We're with you every step of the journey
@@ -16,7 +16,7 @@ const HomebuyingSteps = () => {
             you home.
           </h2>
         </div>
-        <div className="flex w-98">
+        <div className="flex w-56 mt-2 lg:mt-0 lg:w-98">
           <ActionButton size="sm" variant="brand">
             Book An Appointment
           </ActionButton>

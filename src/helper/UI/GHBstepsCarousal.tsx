@@ -133,7 +133,7 @@ const GHBstepsCarousal = () => {
               return (
                 <div
                   key={item.id}
-                  className={`w-[82%] shrink-0 pr-6 transition-all duration-700 ${
+                  className={`w-full lg:w-[82%] shrink-0 pr-6 transition-all duration-700 ${
                     isActive
                       ? "opacity-100 scale-100"
                       : "opacity-40 scale-[0.97]"
