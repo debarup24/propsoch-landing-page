@@ -79,7 +79,7 @@ const AdvisorConnect = () => {
         benefits={mockBenefits}
         advisors={mockAdvisor1}
       />
-      <div className="flex justify-center mt-8">
+      <div className="flex justify-center mt-1 px-6 lg:px-1 lg:w-full">
         <ActionButton size="lg" variant="brand">
           Book An Appointment
         </ActionButton>
