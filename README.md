@@ -1,4 +1,4 @@
-# Part 1: Analysis
+# Analysis -
 
 Lighthouse Score :
 
@@ -24,7 +24,7 @@ Best Practices 77 means there some technical issues exist. It may be -
 
 SEO is Strong
 
-# 5 UI/UX Issues I Observed :
+# UI/UX Issues I Observed :
 
 1. in the customer testimonial section, testimonial cards aren’t perfectly aligned. I fixed it in my code and made it a pinterest style Masonry Grid for web and carousel with autoscroll effect for mobile screen
 
@@ -37,6 +37,8 @@ SEO is Strong
 4. Below the research Insights accordion, we have a light purple banner, it has two buttons, one button which is “Book an appointment” – is not working, after clicking, it redirects to error 404 page.
 
 5. In https://www.propsoch.com/buy/property-for-sale-in-[location]” page pagination is working but UI painting is not eye smoothing
+
+6. In mobile view, "PROPSOCH" written in footer is not visible properly. The sticky navbar mobile is cutting the view. I have fixed it.
 
 # 🌟 I've added one extra section by my own :
 
