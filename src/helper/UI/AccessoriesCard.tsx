@@ -25,9 +25,7 @@ const AccessoriesCard = () => {
           key={index}
           className="group flex flex-col items-center justify-center gap-4 rounded-xl bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-md"
         >
-          {/* Icon Container with the yellow stars effect from your image */}
           <div className="relative text-orange-500">
-            {/* Decorative small stars/sparkles */}
             <span className="absolute -left-2 -top-1 text-[10px] text-yellow-400">
               ✦
             </span>

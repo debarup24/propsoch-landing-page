@@ -9,7 +9,7 @@ const ProductDifference = () => {
 
   return (
     <section className="flex w-full flex-col items-center pb-14">
-      <div className="flex flex-col gap-2 w-full max-w-[1280px]">
+      <div className="flex flex-col gap-2 w-full max-w-7xl">
         <div className="flex flex-col items-center gap-6 px-4 xl:flex-row xl:items-end xl:justify-between xl:px-0">
           <header className="flex flex-col gap-1">
             <span className="inline font-medium text-[#FF6D33] text-sm xl:text-lg">

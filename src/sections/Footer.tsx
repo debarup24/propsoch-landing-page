@@ -103,7 +103,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-4 flex w-full items-center justify-center">
+        <div className="mt-4 mb-6 lg:mb-0 flex w-full items-center justify-center">
           <span className="select-none bg-gradient-to-b from-[#ff7a45] to-[#3a1c12] bg-clip-text text-center text-6xl font-bold text-transparent md:text-5xl lg:text-[12rem]">
             Propsoch
           </span>

@@ -112,7 +112,7 @@ const GHBstepsCarousal = () => {
   };
 
   useEffect(() => {
-    autoPlayRef.current = setInterval(next, 16000);
+    autoPlayRef.current = setInterval(next, 5000);
     return () => {
       if (autoPlayRef.current) clearInterval(autoPlayRef.current);
     };
@@ -139,7 +139,7 @@ const GHBstepsCarousal = () => {
                       : "opacity-40 scale-[0.97]"
                   }`}
                 >
-                  <div className="flex flex-col md:flex-row min-h-[520px] w-full overflow-hidden rounded-[32px] bg-[#F1F5F9] shadow-sm">
+                  <div className="flex flex-col md:flex-row min-h-130 w-full overflow-hidden rounded-4xl bg-[#F1F5F9] shadow-sm">
                     {/* LEFT Content */}
                     <div className="flex flex-[1.3] flex-col justify-center p-8 md:p-14">
                       <div className="mb-6 inline-flex w-fit items-center rounded-full bg-[#1A1A1A] px-4 py-1.5 text-white">
@@ -224,132 +224,3 @@ const GHBstepsCarousal = () => {
 };
 
 export default GHBstepsCarousal;
-
-// "use client";
-// import React, { useState } from "react";
-
-// interface StepData {
-//   id: number;
-//   title: string;
-//   stageNumber: string;
-//   stagetitle: string;
-//   bullets: string[];
-//   videoUrl: string;
-// }
-
-// const mockStepsData: StepData[] = [
-//   {
-//     id: 1,
-//     title: "Tell us about you & your ideal home",
-//     stageNumber: "Stage 1",
-//     stagetitle: "Discovery ",
-//     bullets: [
-//       "High carpet area efficiency",
-//       "Strong investment potential",
-//       "Good metro connectivity",
-//     ],
-//     videoUrl:
-//       "https://d1zk2x7mtoyb2b.cloudfront.net/websiteAssets/product-page/ghb-1.mp4",
-//   },
-//   {
-//     id: 2,
-//     title: "Location advantage",
-//     stageNumber: "Stage 2",
-//     stagetitle: "Prime Area",
-//     bullets: ["Close to IT hubs", "Schools nearby", "Low traffic density"],
-//     videoUrl:
-//       "https://d1zk2x7mtoyb2b.cloudfront.net/websiteAssets/product-page/ghb-2.mp4",
-//   },
-//   {
-//     id: 3,
-//     title: "Community features",
-//     stageNumber: "Stage 3",
-//     stagetitle: "Premium",
-//     bullets: ["Large clubhouse", "Swimming pool", "24x7 security"],
-//     videoUrl: "/videos/sample3.mp4",
-//   },
-// ];
-
-// const GHBstepsCarousal = () => {
-//   const [activeIndex, setActiveIndex] = useState(0);
-
-//   const next = () =>
-//     setActiveIndex((prev) =>
-//       prev === mockStepsData.length - 1 ? 0 : prev + 1,
-//     );
-
-//   const prev = () =>
-//     setActiveIndex((prev) =>
-//       prev === 0 ? mockStepsData.length - 1 : prev - 1,
-//     );
-
-//   return (
-//     <div className="relative rounded-xl bg-amber-100 xl:bg-card shadow-none">
-//       {/* LEFT ARROW */}
-//       {/* <button
-//         onClick={prev}
-//         className="z-10 flex h-10 w-10 items-center justify-center rounded-full bg-black text-white"
-//       >
-//         ‹
-//       </button> */}
-
-//       {/* TRACK */}
-//       <div className="grid grid-cols-1 gap-6 p-0 xl:grid-cols-2 xl:p-12">
-//         {mockStepsData.map((item, index) => {
-//           const isActive = index === activeIndex;
-//           const isNext = index === activeIndex + 1;
-
-//           return (
-//             <div
-//               key={item.id}
-//               className={`
-//                 flex shrink-0 rounded-2xl bg-red-200 p-6 transition-all duration-500
-//                 ${isActive ? "scale-100 opacity-100" : ""}
-//                 ${isNext ? "scale-95 opacity-80" : ""}
-//                 ${!isActive && !isNext ? "scale-90 opacity-40" : ""}
-//               `}
-//             >
-//               {/* LEFT CONTENT */}
-//               <div className="order-2 flex bg-blue-300 size-full flex-col justify-end gap-5 xl:order-1">
-//                 <div className="flex px-5 w-46 font-semibold  h-9 items-center bg-black text-gray-100 rounded-3xl">
-//                   <p className=" text-sm text-gray-200">{item.stageNumber} </p>
-//                   <p className="text-sm  text-gray-200"> — {item.stagetitle}</p>
-//                 </div>
-//                 <h2 className="mt-3 text-2xl font-semibold">{item.title}</h2>
-
-//                 <ul className="mt-4 list-disc space-y-2 pl-4 text-gray-700">
-//                   {item.bullets.map((b, i) => (
-//                     <li key={i}>{b}</li>
-//                   ))}
-//                 </ul>
-//               </div>
-
-//               {/* RIGHT VIDEO */}
-//               <div className="order-1 flex size-full flex-col items-start xl:order-2 xl:items-end">
-//                 <video
-//                   src={item.videoUrl}
-//                   autoPlay={isActive}
-//                   muted
-//                   loop
-//                   playsInline
-//                   className="h-full w-full object-cover"
-//                 />
-//               </div>
-//             </div>
-//           );
-//         })}
-//         <div className="mt-10 items-center">Button</div>
-//       </div>
-
-//       {/* RIGHT ARROW */}
-//       {/* <button
-//         onClick={next}
-//         className="z-10 flex h-10 w-10 items-center justify-center rounded-full bg-black text-white"
-//       >
-//         ›b
-//       </button> */}
-//     </div>
-//   );
-// };
-
-// export default GHBstepsCarousal;

@@ -41,9 +41,6 @@ const ProductHero = () => {
               </div>
             </div>
             <div className="flex flex-col gap-4 xl:flex-row xl:gap-6">
-              {/* <button className="items-center cursor-pointer justify-center gap-2 whitespace-nowrap rounded-lg transition-colors focus-visible:outline-hidden focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-orange-500 text-white shadow-sm hover:bg-orange-400 h-9 px-4 py-2 inline font-semibold text-xs xl:text-sm leading-[1.35] w-full xl:w-100">
-                Book An Appointment
-              </button> */}
               <ActionButton size="lg" variant="brand">
                 Book An Appointment
               </ActionButton>
@@ -72,7 +69,7 @@ const ProductHero = () => {
             <Sparkle className="absolute text-orange-300 -top-6 right-1 z-20 size-12 xl:-top-10 xl:-right-6 xl:size-20" />
           </div>
           <Home className="absolute text-orange-200 -top-10 -left-2 hidden size-25 xl:-top-8 xl:-left-16 xl:block xl:size-50" />
-          <Home className="absolute text-orange-100 -right-2 -bottom-4 hidden size-[75px] xl:right-10 xl:bottom-2 xl:block xl:size-[152px]" />
+          <Home className="absolute text-orange-100 -right-2 -bottom-4 hidden size-[75px] xl:right-10 xl:bottom-2 xl:block xl:size-38" />
         </div>
       </div>
       <HeroPoster />
